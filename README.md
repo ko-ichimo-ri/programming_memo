@@ -10,4 +10,4 @@
 - [事故の教訓からヒントを得た変なループ処理](./Bash/strange_loop)
 
 ## Python編
-(準備中)
+- [リストのオブジェクトIDわかってる？](./Python/list_id.py)
