@@ -1,4 +1,28 @@
-# ポインタとハードウェア依存な入力
+# ポインタがわかっているかテスト(ただし、CPU依存である。処理系依存ではない。)
+## プログラムの内容
+[pointer.c](./pointer.c)の中身は以下の通りです。
+```C
+#include <stdio.h>
+
+int main(){
+    unsigned char chars[2];
+    int x,y;
+
+    printf("Enter two integers between 0 and 255.\n");
+    scanf("%d%d",&x,&y);
+
+    short *p=(short *)chars;
+    *p=y*256+x;
+
+    printf("\n");
+    
+    for(int i=0;i<2;i++){
+        printf("%d\n",chars[i]);
+    }
+    return 0;
+}
+```
+
 ## 実行方法の例
 WSLで以下のようにコマンド入力を行う。
 ```bash
